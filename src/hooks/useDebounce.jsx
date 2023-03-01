@@ -10,7 +10,7 @@ function useDebounce(value, delay) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
-    return debouncedValue;
+    return debouncedValue.trim();
 }
 
 export default useDebounce;

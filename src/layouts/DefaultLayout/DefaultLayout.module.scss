@@ -2,13 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #ebebeb;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background: #f9f9f9;
+}
+
+.wrapper-content {
     width: var(--default-layout-width);
     max-width: 100%;
     padding: 0 var(--default-layout-horizontal-spacer);
-    margin-top: var(--default-layout-header-height);
     display: flex;
 }
 

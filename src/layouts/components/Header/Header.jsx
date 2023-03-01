@@ -2,12 +2,13 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import config from '~/config';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import Menu from '~/components/Popper/Menu';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
@@ -15,7 +16,16 @@ import Search from '../Search';
 const cx = classNames.bind(styles);
 
 function Header() {
-    const currentUser = true;
+    const navigate = useNavigate();
+    const user = useSelector((state) => state.user.user);
+
+    const handleSignup = () => {
+        navigate('/signup/');
+    };
+
+    const handleLogin = () => {
+        navigate('/login/');
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -27,7 +37,16 @@ function Header() {
                 <Search />
 
                 <div className={cx('actions')}>
-                    {currentUser ? (
+                    {user === undefined || user === null ? (
+                        <>
+                            <Button onClick={handleSignup} text>
+                                sign up
+                            </Button>
+                            <Button onClick={handleLogin} primary>
+                                Log in
+                            </Button>
+                        </>
+                    ) : (
                         <>
                             <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
@@ -46,21 +65,17 @@ function Header() {
                                 </button>
                             </Tippy>
                         </>
-                    ) : (
-                        <>
-                            <Button text>Upload</Button>
-                            <Button primary>Log in</Button>
-                        </>
                     )}
 
-                    {currentUser ? (
+                    {user === undefined || user === null ? (
+                        <></>
+                    ) : (
                         <Image
+                            onClick={() => navigate('/profile')}
                             className={cx('user-avatar')}
-                            src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
+                            src={user.avatar}
                             alt="Nguyen Van A"
                         />
-                    ) : (
-                        <></>
                     )}
                 </div>
             </div>

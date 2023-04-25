@@ -1,0 +1,48 @@
+.wrapper {
+    position: relative;
+    float: left;
+    margin: 12px 0 0 12px;
+    height: 186px;
+    width: 12.5%;
+    position: relative;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    border: 1px solid #f2f2f2;
+}
+
+.item {
+    height: 100%;
+    width: 100%;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 0;
+    text-shadow: 1px 2px 2px #000;
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.name {
+    font-size: 12px;
+}
+
+.full-label {
+    width: 34px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    margin: -50px 0 0 -7px;
+    z-index: 1;
+}

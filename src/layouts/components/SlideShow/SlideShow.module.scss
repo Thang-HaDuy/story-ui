@@ -1,0 +1,29 @@
+.wrapper {
+    width: var(--default-layout-width);
+    max-width: 100%;
+    padding: 0 var(--default-layout-horizontal-spacer);
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+}
+
+.title {
+    padding-top: 15px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

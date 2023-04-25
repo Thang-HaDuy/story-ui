@@ -1,0 +1,60 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px dashed #ccc;
+}
+
+.icon {
+    padding-right: 5px;
+}
+
+.name {
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 41.166667%;
+}
+.category {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 22.5%;
+    border-left: 1px dashed #ccc;
+}
+
+.cate {
+    &:last-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.chapter {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    line-height: 40px;
+    border-left: 1px dashed #ccc;
+    width: 19.66666667%;
+}
+.time {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 16.666667%;
+    border-left: 1px dashed #ccc;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
